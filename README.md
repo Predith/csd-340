@@ -1,2 +1,4 @@
-# csd-340
-Web Development with HTML and (2257-DD)
+# CSD 340 Web Development with HTML and CSS
+## Contributors
+- Instructor Sue Sampson
+- Student Kristopher Kuenning
