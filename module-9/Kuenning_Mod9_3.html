@@ -1,0 +1,59 @@
+<!--
+Kristopher Kuenning
+Assignment 9.3
+07/06/2025
+CSD-340
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <meta name="description" content=" This is a webpage for CSD 340 with HTML and CSS.">
+    <meta name="author" content="Kristopher Kuenning">
+    <meta name="keywords" content="HTML, CSS, webpage">
+    <meta charset="UTF-8">
+    <link href="Kuenning_Mod2_2.css" type="text/css"
+      rel="stylesheet" />
+</head>
+    <script>
+	var firstVariableValue = "privilege";
+    
+	var secondVariableValue = "opportunities";
+    
+	var thirdVariableValue = "baseball";
+   
+	var fourthVariableValue = "local";
+    </script>
+
+<body>
+    <div id=”container”>
+         <h1> Assignment 9.3: JavaScript, Part 1 </h1>
+
+         <p class="intro">
+         <p> I grew up in Austin, Texas, with my family: my mom, dad, and brother. We had one dog named Beth and one cat named CJ, who were much older than I by years, but stayed within the family until I went to high school. Austin was a lot smaller in population between 1996 and 2015, so growing up there during that time was a <span id = "privilege">______</span>. The boom of people moving there has changed the city I once grew up in. </p>
+         <p> My childhood was in a suburban town with many close friends I went to school with from kindergarten through high school. My parents worked two jobs each and provided the best <span id = "opportunities">______</span> for my brother and me to succeed after school by providing us with a nice neighborhood, a full kitchen of food, and even our TVs in our rooms. I would always go to my neighborhood park with my friends to play pick-up games of basketball or football, and after, go over to my friend's house to play video games, swim, or jump on their trampoline. </p>
+         <p> Growing up, my brother had all the various video game systems you could imagine and would invite me to play these games at a very young age. <span> Years later, we still played, but now we played online, as I no longer live with him or even in the same state. I played numerous sports growing up, but <span id = "baseball">______</span> was my favorite sport. </span> As it is an individual team sport, everyone plays a crucial role. No one will go up to swing the bat for you, pitch the ball for you, or run for you, as this makes the sport more enjoyable for me, as I can showcase my skills while helping my team out. </p>
+         <p> After high school, I started to get into working retail, but more specifically in the food department at my <span id = "local">______</span> grocery store. This field of work has really followed me till now since I am currently working at Target as an executive team leader for inbound operations. I went from bagging groceries, scrubbing toilets, and taking trash out every day to running my own team in an essential process for the business. </p>
+	 <p>
+	    <button type="button"
+		onclick="document.getElementByID('privilege').innerHTML=firstVariableValue">privilege</button><br />
+	    <button type="button"
+		onclick="document.getElementByID('opportunities').innerHTML=secondVariableValue">opportunities</button><br />
+            <button type="button"
+		onclick="document.getElementByID('baseball').innerHTML=thirdVariableValue">baseball</button><br />
+	    <button type="button"
+		onclick="document.getElementByID('local').innerHTML=fourthVariableValue">local</button><br />
+	 </p>
+         
+         <address>
+             <p><a href="https://www.bellevue.edu" target="_blank">Bellevue University</a></p>
+             <p>1000 Galvin Road South</p>
+             <p>Bellevue, NE 68005</p>
+         </address>
+
+    </div>
+
+</body>
+
+</html>
