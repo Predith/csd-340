@@ -1,0 +1,106 @@
+<!-- 
+Kristopher Kuenning 
+Assignment #11.2
+7.20.25
+CSD340
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    #taskInput {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #taskDisplay {
+      margin-top: 20px;
+      text-align: left;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+  <p>Type a task in the box, then click "Add" to include it in your list. Use "Delete Last Entry" to remove the most recent item, or "Display" to show all tasks.</p>
+
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <br>
+  <button onclick="addTask()">Add</button>
+  <button onclick="deleteLastTask()">Delete Last Entry</button>
+  <button onclick="displayTasks()">Display</button>
+
+  <div id="taskDisplay"></div>
+
+  <script>
+    const taskList = [];
+
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const newTask = input.value.trim();
+
+      if (newTask === "") {
+        alert("Please enter a task before adding.");
+        return;
+      }
+
+      taskList.push(newTask);
+      alert(`Task added: "${newTask}" at position ${taskList.length}`);
+      input.value = "";
+    }
+
+    function deleteLastTask() {
+      if (taskList.length === 0) {
+        alert("The task list is already empty.");
+        return;
+      }
+
+      const removedTask = taskList.pop();
+      alert(`Deleted task: "${removedTask}"`);
+    }
+
+    function displayTasks() {
+      const display = document.getElementById("taskDisplay");
+
+      if (taskList.length === 0) {
+        display.innerHTML = "<p><em>The task list is currently empty.</em></p>";
+        return;
+      }
+
+      let html = "<ol>";
+      for (let i = 0; i < taskList.length; i++) {
+        html += `<li>${taskList[i]}</li>`;
+      }
+      html += "</ol>";
+
+      display.innerHTML = html;
+    }
+  </script>
+
+</body>
+</html>
