@@ -1,0 +1,54 @@
+<!-- Kristopher Kuenning Assignment #3.3 -->
+
+h1 {
+
+  text-align: center;
+}
+
+.left, .right {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.bottom-link {
+  width: 100%;
+  margin-top: 60%;
+  float: right;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+ol, ul {
+  font-weight: 300;
+}
+
+.left h3,
+.left ol {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+.right h3,
+.right ul {
+  border: 1px dashed red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+a:hover {
+  text-decoration: underline;
+}

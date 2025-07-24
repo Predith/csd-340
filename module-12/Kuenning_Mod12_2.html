@@ -1,0 +1,144 @@
+<!-- 
+Kristopher Kuenning 
+Assignment #12.2
+7.24.25
+CSD340
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Kuenning_Mod3_3.css">
+
+    <meta name="description" content="This is a webpage for CSD 340 with HTML and CSS"/>
+    <meta name="author" content="Kristopher Kuenning"/>
+    <meta name="keywords" content="HTML, CSS, webpage"/>
+    <meta charset="UTF-8"/>
+
+  <style>
+
+    h1 {
+      text-align: center;
+    }
+
+    #container {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .left, .right {
+      width: 45%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .left {
+      margin-right: 5%;
+    }
+
+    .bottom-link {
+      width: 100%;
+      margin-top: 60%;
+    }
+
+    .bottom-link a {
+      float: right;
+    }
+    
+    #bookList {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    button {
+      margin-right: 10px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="container">
+
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+    <div class="left">
+        <h3>Top 10 Favorite Books</h3>
+
+        <ol>
+          <li>To Kill a Mockingbird</li>
+          <li>1984</li>
+          <li>The Great Gatsby</li>
+          <li>The Catcher in the Rye</li>
+          <li>Moby Dick</li>
+          <li>The Hobbit</li>
+          <li>Harry Potter and the Sorcerer’s Stone</li>
+          <li>The Lord of the Rings</li>
+          <li>Brave New World</li>
+          <li>The Book Thief</li>
+        </ol>
+
+        <button onclick="sortTopToBottom()">Top to Bottom</button>
+        <button onclick="sortBottomToTop()">Bottom to Top</button>
+
+        <div id="bookList"></div>
+      </div>
+
+      <div class="right">
+          <h3>5 Things I’ve Learned Since the Course Started</h3>
+
+          <ul>
+            <li>How to structure a basic HTML document</li>
+            <li>How to apply CSS using external stylesheets</li>
+            <li>How to create and organize lists</li>
+            <li>How to use divs to organize content</li>
+            <li>How to link pages together</li>
+          </ul>
+
+      </div>
+
+      <div class="bottom-link">
+        <li><a href="https://predith.github.io/csd-340/">Back to Landing Page</a></li>
+                                     
+
+      </div>
+
+    </div>
+
+    <script>
+      const books = [
+        "To Kill a Mockingbird",
+        "1984",
+        "The Great Gatsby",
+        "The Catcher in the Rye",
+        "Moby Dick",
+        "The Hobbit",
+        "Harry Potter and the Sorcerer’s Stone",
+        "The Lord of the Rings",
+        "Brave New World",
+        "The Book Thief"
+      ];
+
+      function sortTopToBottom() {
+        const sorted = [...books].sort(); // Ascending
+        displayBooks(sorted);
+      }
+
+      function sortBottomToTop() {
+        const sorted = [...books].sort().reverse(); // Descending
+        displayBooks(sorted);
+      }
+
+      function displayBooks(list) {
+        const bookListDiv = document.getElementById("bookList");
+        bookListDiv.innerHTML = "<ol>" + list.map(book => `<li>${book}</li>`).join("") + "</ol>";
+      }
+  </script>
+
+</body>
+
+</html>
